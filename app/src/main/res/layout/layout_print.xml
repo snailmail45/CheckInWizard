@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="1200px"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tv_patient_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="David Smith\n415-860-8431\ndavid.smith2215@gmail.com\nPatient Id: 6G2Vx5d"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider_one"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_patient_info" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="12/01/2022\n11:05am PST"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="Reason for checkup:\nI am not feeling well, my stomach is hurting."
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_one" />
+
+        <View
+            android:id="@+id/divider_two"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reason" />
+
+        <TextView
+            android:id="@+id/tv_transaction_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="Payment Information:\nTransaction id: 5F8df1vdf5g54\nVISA xxxx-xxxx-xxxx-1111\n$25.00 copay"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_two" />
+
+        <View
+            android:id="@+id/divider_three"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="6dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_transaction_info" />
+
+        <TextView
+            android:id="@+id/tv_num_documents"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="16dp"
+            android:text="5 documents uploaded"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_three" />
+
+        <LinearLayout
+            android:id="@+id/layout_documents"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/tv_num_documents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
